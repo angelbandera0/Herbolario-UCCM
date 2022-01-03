@@ -1,0 +1,24 @@
+sequelize model:create --name Usuario --attributes nombre:string,apellidos:string,username:string,email:string,role:string,imagen:string,password:string,salt:string
+
+sequelize model:create --name Planta --attributes nombre:string,nombre_cientifico:string,caracterizacion:string,origen:string,tipo_especie:string,codigo:string,reino:string,division:string,subdivision:string,clase:string,subclase:string,orden:string,familia:string,genero:string,especie:string,area:string,utilidad:string,cantidad:integer,is_endemica:boolean,curiosidad:string,foto_planta:string,foto_recuerdo:string,fecha_inicio:dateonly
+
+sequelize model:create --name Estado --attributes causa:string,estado:string
+
+sequelize model:create --name Operacion --attributes tipo:string,mensaje:string,id_planta
+sequelize model:create --name Planta_Log --attributes id_estado:integer,id_planta:integer,operacion:string,nombre:string,nombre_cientifico:string,caracterizacion:string,origen:string,tipo_especie:string,codigo:string,reino:string,division:string,subdivision:string,clase:string,subclase:string,orden:string,familia:string,genero:string,especie:string,area:string,utilidad:string,cantidad:integer,is_endemica:boolean,curiosidad:string,foto_planta:string,foto_recuerdo:string,fecha_inicio:dateonly
+
+
+#generar base de datos
+sequelize db:migrate
+
+sequelize model:create --name Usuario --attributes nombre:string,username:string,password:string,salt:string
+
+sequelize model:create --name Categoria --attributes nombre:string
+
+sequelize model:create --name SubCategoria --attributes nombre:string
+
+
+sequelize model:create --name Baja --attributes id_producto:integer,id_turno:integer,cantidadb:integer
+
+
+
